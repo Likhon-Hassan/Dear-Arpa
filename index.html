@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dear Arpa</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="confetti"></canvas>
+
+  <div class="container">
+    <div class="top-text">Dear Arpa</div>
+    <div class="typing">Wishing You The Happiest Birthday Ever</div>
+
+    <div class="happy">
+      <div class="birthday-heading">
+        <div class="big-text">Happy Birthday</div>
+        <div class="small-text">❤️Dear Arpa❤️</div>
+      </div>
+      <div class="quote-text">
+        Make a list of your top priorities, then delete half of them<br>
+        and focus on what is lefts. Everyone is temporary.
+      </div>
+      <div class="flaws">You are more than your flaws.<br>
+       You are special everyday</div>
+      <div class="footer-text">~ Love from Mr. 3rd Class ~</div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          💌 Tap to Open
+        </div>
+        <div class="flip-card-back">
+          আমাদের আর একসাথে বসে চা খাওয়া হলো না 😅<br><br>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cartoon Balloon Proposal Section -->
+   <h5>💌Could be USss💌</h5>
+<section class="balloon-scene" style="text-align: center; margin-top: 30px;">
+  <img src="https://i.postimg.cc/23RVJS61/502702482-122135074022791671-848054061828595734-n.jpg" 
+       alt="Boy and Girl in their OWN place" 
+       style="width: 100%; max-width: 400px; border-radius: 20px; box-shadow: 0 0 20px rgba(255, 0, 150, 0.5);">
+</section>
+
+
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/audio/2023/03/10/audio_4030c8098c.mp3" type="audio/mp3" />
+  </audio>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script>
+    const duration = 8 * 1000;
+    const end = Date.now() + duration;
+    (function frame() {
+      confetti({
+        particleCount: 5,
+        angle: 60,
+        spread: 80,
+        origin: { x: 0 },
+        colors: ['#ff66b2', '#ffd700', '#66ccff']
+      });
+      confetti({
+        particleCount: 5,
+        angle: 120,
+        spread: 80,
+        origin: { x: 1 },
+        colors: ['#ff66b2', '#ffd700', '#66ccff']
+      });
+      if (Date.now() < end) requestAnimationFrame(frame);
+    })();
+  </script>
+</body>
+</html>
